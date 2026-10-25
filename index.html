@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fuAI: AI content filter</title>
+<meta name="description" content="An ad blocker for AI content. Label, blur or hide AI-generated images and video, based on evidence, on your device.">
+<style>
+:root{--ink:#15130f;--paper:#fbf7ef;--signal:#e4462b;--muted:#6d665b;--line:#e3dccd;--card:#fffdf8}
+@media (prefers-color-scheme:dark){:root{--ink:#f3ede1;--paper:#15130f;--muted:#a59d8e;--line:#39342b;--card:#1d1a15}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:450 17px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.b{display:flex;gap:10px;align-items:center;font-weight:800;font-size:19px}
+.m{width:24px;height:24px;border:2.5px solid var(--ink);border-radius:7px;position:relative}.m:after{content:"";position:absolute;inset:5px;background:var(--signal);transform:rotate(45deg);border-radius:2px}
+h1{font-size:clamp(40px,7vw,80px);line-height:1;letter-spacing:-.04em;margin:48px 0 18px;font-weight:850}
+.lede{font-size:20px;color:var(--muted);max-width:620px}
+.cta{display:inline-block;margin:22px 0 6px;background:var(--ink);color:var(--paper);padding:15px 22px;border-radius:12px;font-weight:750;text-decoration:none}
+.small{font-size:14px;color:var(--muted)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:48px 0}
+.ba figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.ba img{width:100%;aspect-ratio:1;object-fit:cover;display:block}.ba figcaption{padding:10px 14px;font-weight:650}
+.blur img{filter:blur(24px) saturate(.6);transform:scale(1.08)}
+.pill{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:6px;background:#c93a1f;color:#fff;font:700 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.05em;text-transform:uppercase;z-index:2}
+.pill:before{content:"";width:8px;height:8px;border-radius:2px;background:#fff;transform:rotate(45deg)}
+.show{position:absolute;top:42%;left:50%;transform:translateX(-50%);background:rgba(21,19,15,.82);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;z-index:2}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:24px 0 56px}
+.c{border-top:2px solid var(--ink);padding-top:12px}.c h3{margin:0 0 6px;font-size:18px}.c p{margin:0;color:var(--muted)}
+h2{font-size:30px;letter-spacing:-.02em;margin:56px 0 8px}
+details{border-top:1px solid var(--line);padding:14px 0}summary{font-weight:700;cursor:pointer}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 48px;color:var(--muted);font-size:14px}
+@media (max-width:560px){.ba{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="w">
+<nav><div class="b"><span class="m" aria-hidden="true"></span>fuAI</div><a href="privacy.html" style="color:inherit">Privacy</a></nav>
+<h1>Take back control of what you see online.</h1>
+<p class="lede">An ad blocker for AI content. fuAI finds evidence that an image or video was made with AI, then labels it, blurs it, or hides it, right in your feed.</p>
+<a class="cta" href="#" aria-disabled="true">Coming soon to the Chrome Web Store</a>
+<p class="small">No account. Runs on your device. Nothing uploaded.</p>
+
+<div class="ba" aria-label="Before and after">
+  <figure><img src="ai-interior.jpg" alt="A sunlit living room"><figcaption>Before: looks like a photo.</figcaption></figure>
+  <figure class="blur"><span class="pill">AI · verified</span><span class="show">Show</span><img src="ai-interior.jpg" alt="The same image, blurred and labeled AI"><figcaption>After: Content Credentials signed by Google say it's AI-generated.</figcaption></figure>
+</div>
+
+<h2>Evidence, not vibes</h2>
+<div class="grid">
+  <div class="c"><h3>Verified</h3><p>Signed Content Credentials from OpenAI, Google, Adobe and others, checked against the C2PA trust list.</p></div>
+  <div class="c"><h3>Disclosed</h3><p>Platform labels like YouTube's "Made with AI", and AI settings written into the file.</p></div>
+  <div class="c"><h3>Likely</h3><p>An on-device model's estimate, clearly marked as one. It never hides anything on its own by default.</p></div>
+  <div class="c"><h3>Unknown</h3><p>No evidence either way. We never stamp anything "human-made".</p></div>
+</div>
+
+<h2>Three modes, one click</h2>
+<div class="grid">
+  <div class="c"><h3>Label</h3><p>A small, clear mark. Tap it to see exactly why.</p></div>
+  <div class="c"><h3>Blur</h3><p>Out of sight until you choose to look.</p></div>
+  <div class="c"><h3>Hide</h3><p>Collapsed out of your feed, with Undo.</p></div>
+</div>
+
+<h2 id="privacy">Private by design</h2>
+<p class="lede">Every check runs in your browser. No account, no analytics, no ads, no data sold. Ever.</p>
+
+<h2>Honest answers</h2>
+<details><summary>Will it catch every AI image?</summary><p>No. Most AI images lose their credentials when they're re-uploaded, and statistical detection makes mistakes. fuAI always shows what kind of evidence it has, and stays quiet when it has none.</p></details>
+<details><summary>Can it tell me something is real?</summary><p>No, and it won't pretend to. "No label" means "no evidence of AI", not "made by a human".</p></details>
+<details><summary>Which sites?</summary><p>YouTube, Instagram, Facebook, Threads, TikTok, Pinterest, X, Reddit and LinkedIn from install, and every site with one click.</p></details>
+<details><summary>Is it free?</summary><p>Yes. The filter is free and stays free. Any future paid extras will be optional and won't take anything away from the free version.</p></details>
+<footer>Made with care. Sample image: MIT-licensed dataset (Google Gemini output with Content Credentials).</footer>
+</div><footer style="max-width:760px;margin:48px auto 24px;padding:0 16px;font-size:13px;opacity:.7">Contact: <a href="mailto:iujoseph972@gmail.com">iujoseph972@gmail.com</a> · <a href="privacy.html">Privacy policy</a> · <a href="credits.txt">Image credits</a></footer>
+</body></html>

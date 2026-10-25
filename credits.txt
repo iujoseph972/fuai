@@ -1,0 +1,5 @@
+Demo images (resized copies):
+- cam-landscape.jpg: "truepic-20230212-landscape.jpg", C2PA public test files (github.com/c2pa-org/public-testfiles), CC BY-SA 4.0. The resized copy is shared under CC BY-SA 4.0.
+- cam-building.jpg: "nikon-20221019-building.jpeg", C2PA public test files, CC BY-SA 4.0. The resized copy is shared under CC BY-SA 4.0.
+- ai-street.jpg: OpenAI image output, from the "gpt-generated-image-collection" dataset by winrisef on Hugging Face (MIT).
+- ai-interior.jpg: Google image output, from the "nano-banana-pro-generated-1k-clone" dataset by exdysa on Hugging Face (MIT).
