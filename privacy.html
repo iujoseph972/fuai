@@ -2,8 +2,8 @@
 <style>:root{--bg:#faf6ef;--ink:#15130f}@media (prefers-color-scheme:dark){:root{--bg:#15130f;--ink:#f3eee5}}body{background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 16px}a{color:inherit}h1{font-size:28px}h2{font-size:20px;margin-top:28px}</style></head><body>
 <p><a href="index.html">← fuAI</a></p>
 <h1>Privacy Policy — fuAI</h1>
-<p><em>Last updated: October 25, 2026. Owner contact: iujoseph972@gmail.com.</em></p>
-<p>fuAI is a browser extension that labels, blurs or hides content that shows evidence of being AI-generated. It is built to work <strong>entirely on your device</strong>.</p>
+<p><em>Last updated: October 26, 2026. Owner contact: iujoseph972@gmail.com.</em></p>
+<p>fuAI is a browser extension (for Chrome, and for Safari on Mac) that labels, blurs or hides content that shows evidence of being AI-generated. It is built to work <strong>entirely on your device</strong>.</p>
 <h2>What we collect</h2>
 <p><strong>Nothing.</strong> fuAI has no servers that receive your data, no analytics, no tracking, no advertising, and no account.</p>
 <h2>What the extension processes on your device</h2>
@@ -14,6 +14,11 @@
 <li><strong>Local results cache.</strong> Results are stored in your browser under a one-way hash of the image address (not the address itself), for up to 14 days. Clear it any time by removing the extension.</li>
 <li><strong>Account and post memory (Instagram, Facebook, Threads).</strong> To recognise accounts whose posts the platform repeatedly labels as AI, the extension keeps salted one-way hashes of account and post identifiers (with a random salt unique to your install), plus counts. Entries expire after 90 days. "Clear local history" in the popup deletes them immediately.</li>
 <li><strong>Settings and counters.</strong> Your mode, site exceptions, and counts of items labeled or filtered. Settings sync between your own Chrome profiles through Chrome's built-in sync, if you have it enabled. Counts stay on the device.</li>
+</ul>
+<h2>Safari on Mac</h2>
+<ul>
+<li>The Safari version does the same checks as above, inside Safari. The fuAI Mac app that contains the extension runs the AI-detection model on your Mac's Neural Engine (Core ML). The extension passes it the pixels of an image in memory; the app returns a score and keeps nothing. The app makes no network requests.</li>
+<li>Safari decides which websites fuAI may run on: you choose them in Safari Settings → Extensions.</li>
 </ul>
 <h2>What we never do</h2>
 <ul>
